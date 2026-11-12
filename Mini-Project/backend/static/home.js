@@ -226,7 +226,7 @@ function toggleTheme() {
     (n.style.display = "none");
 }),
   (window.cachedDashboardHistory = []),
-  window.addEventListener("load", checkAuthToken),
+  document.addEventListener("DOMContentLoaded", checkAuthToken),
   (() => {
     let i = document.getElementById("particles");
     if (i) {
@@ -281,7 +281,7 @@ function toggleTheme() {
             t.fill());
         }
       }
-      let n = Array.from({ length: 150 }, () => new l());
+      let n = Array.from({ length: 75 }, () => new l());
       function e() {
         ((i.width = window.innerWidth), (i.height = window.innerHeight));
       }

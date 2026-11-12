@@ -6,6 +6,7 @@ import uuid, subprocess, os, sys, shutil, threading, json, hashlib, datetime
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'syntaxia-secret-key'
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 3600
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
 

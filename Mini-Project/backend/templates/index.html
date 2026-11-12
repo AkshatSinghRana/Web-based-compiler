@@ -7,6 +7,7 @@
     <meta name="description" content="A powerful web-based interactive compiler supporting Python, C, C++, and Java. Write, run, and interact with programs directly in your browser.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
@@ -368,13 +369,13 @@
 
 <div class="toast" id="toast"></div>
 
-<footer class="app-footer"
+<footer class="app-footer">
     <span class="footer-sep">·</span>
     <span>Web-Based Compiler Platform</span>
 </footer>
 
-<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script defer src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+<script defer src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

@@ -882,7 +882,7 @@ function loadWorkspace() {
         "Enter" === e.key && (e.preventDefault(), sendTerminalInput());
       });
   }),
-  window.addEventListener("load", checkAuthToken),
+  document.addEventListener("DOMContentLoaded", checkAuthToken),
   document.addEventListener("keydown", function (e) {
     ((e.ctrlKey || e.metaKey) &&
       "Enter" === e.key &&
@@ -997,9 +997,9 @@ function loadWorkspace() {
           i.fill());
       }
     }
-    let r = Array.from({ length: 200 }, () => new t()),
+    let r = Array.from({ length: 100 }, () => new t()),
       l = Array.from({ length: 3 }, () => new n()),
-      s = Array.from({ length: 70 }, () => new o()),
+      s = Array.from({ length: 35 }, () => new o()),
       d = 0;
     !(function e() {
       if ((i.clearRect(0, 0, a.width, a.height), d++, isDark))
